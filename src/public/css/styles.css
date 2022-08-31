@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* container app */
+#app {
+  width: 990px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* title app */
+#header .title {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* styles form */
+#form {
+  background: #ddd;
+  width: 400px;
+  max-width: 400px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#form div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* elements form */
+input,
+textarea,
+button {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 5px;
+  margin: 5px 0;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+/* styles textarea (description) */
+#form textarea {
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 200px;
+  min-height: 200px;
+}
+
+/* button styles ()send */
+#form button {
+  cursor: pointer;
+}
+#form button:hover {
+  background-color: #ddd;
+}
