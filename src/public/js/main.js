@@ -6,8 +6,6 @@ const sendBtn = document.querySelector(".form__send");
 sendBtn.addEventListener("click", async (e) => {
   e.preventDefault();
 
-  // if (!formFile.files[0]) return alert("File no selected!");
-
   const serie = new FormData();
   serie.append("name", formName.value);
   serie.append("description", formDescription.value);
@@ -23,7 +21,14 @@ sendBtn.addEventListener("click", async (e) => {
       optionFetch
     );
     const res = await responseSendSerie.json();
-    console.log(res);
+
+    if (res.error) {
+      return alert(res.result);
+    } else {
+      return alert(
+        `New Serie:\nname: ${res.result.name}\ndescription: ${res.result.description}\nimgName: ${res.result.image}`
+      );
+    }
   } catch (e) {
     console.log(e);
   }

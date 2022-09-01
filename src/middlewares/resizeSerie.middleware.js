@@ -8,7 +8,7 @@ const resizeSerie = async (req, res, next) => {
   }
 
   if (!req.file)
-    return res.json({ error: true, result: "Err: file not found!" });
+    return res.json({ error: true, result: "Error: file not found!" });
 
   // resizing file (img)
   const filePath = req.file.path;
