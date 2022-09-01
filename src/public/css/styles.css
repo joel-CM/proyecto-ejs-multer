@@ -8,8 +8,9 @@
 
 /* container app */
 #app {
-  width: 990px;
   max-width: 1200px;
+  min-width: 990px;
+  width: 990px;
   margin: 0 auto;
 }
 
@@ -17,6 +18,18 @@
 #header .title {
   text-align: center;
   padding: 1rem 0;
+}
+
+/* nav */
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.nav li a {
+  text-decoration: none;
+  padding: 0 5px;
 }
 
 /* styles form */
@@ -57,10 +70,57 @@ button {
   min-height: 200px;
 }
 
+/* detail series */
+.detail {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    "image image description"
+    "image image description";
+}
+.detail__title {
+  grid-area: title;
+  margin-left: 7rem;
+}
+.detail__description {
+  grid-area: description;
+}
+.detail__img {
+  min-width: 300px;
+  grid-area: image;
+}
+.detail__img img {
+  display: block;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
 /* button styles ()send */
 #form button {
   cursor: pointer;
 }
 #form button:hover {
   background-color: #ddd;
+}
+
+/*  -------------- clases */
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.padding-x {
+  padding: 0 2rem;
+}
+.padding-y {
+  padding: 2rem 0;
+}
+.padding-bottom {
+  padding-bottom: 2rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

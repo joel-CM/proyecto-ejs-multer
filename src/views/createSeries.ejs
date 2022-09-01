@@ -1,0 +1,27 @@
+<%- include("./layaouts/main", {title: "Create Serie" }) %>
+    <div id="app">
+        <!-- header -->
+        <%- include('./layaouts/header', { title: "Create Serie" }) %>
+
+            <main id="main">
+                <form id="form">
+                    <div class="form__box-name">
+                        <input class="form__name" type="text" placeholder="Name..." />
+                    </div>
+                    <div class="form__box-description">
+                        <textarea class="form__description" placeholder="Description"></textarea>
+                    </div>
+                    <div class="form__box-image">
+                        <input type="file" class="form__file" />
+                    </div>
+                    <div class="form__box-send">
+                        <button class="form__send">Enviar</button>
+                    </div>
+                </form>
+            </main>
+    </div>
+
+    <!-- script -->
+    <script src="/js/main.js"></script>
+
+    <%- include("./layaouts/endMain") %>

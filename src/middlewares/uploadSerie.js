@@ -15,7 +15,7 @@ const uploadSerie = multer({
   storage,
   fileFilter: (req, file, cb) => {
     const ext = file.originalname.split(".").pop();
-    const validExts = ["png", "jpg"];
+    const validExts = ["png", "jpg", "jpeg"];
 
     if (!validExts.includes(ext)) {
       req.uploadImage = {};

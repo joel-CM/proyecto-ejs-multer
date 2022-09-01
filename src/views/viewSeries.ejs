@@ -1,0 +1,24 @@
+<%- include("./layaouts/main", {title: "View Series" }) %>
+    <div id="app">
+        <!-- header -->
+        <%- include('./layaouts/header', { title: "View Series" }) %>
+
+            <main id="main">
+                <% if(!series.length){%>
+                    <h4 class="text-center">There are no series yet</h4>
+                    <%}else { %>
+                        <h2 class="padding-x">Series</h2>
+                        <ul class="nav">
+                            <%series.forEach((serie)=> { %>
+                                <li class="cursor-pointer">
+                                    <a href="/serie/<%= serie._id %>">
+                                        <%= serie.name %>
+                                    </a>
+                                </li>
+                                <%})%>
+                        </ul>
+                        <%}%>
+            </main>
+    </div>
+
+    <%- include("./layaouts/endMain") %>
