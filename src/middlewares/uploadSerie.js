@@ -15,7 +15,9 @@ const uploadSerie = multer({
   storage,
   fileFilter: (req, file, cb) => {
     const ext = file.originalname.split(".").pop();
-    if (!ext === "png" || !ext === "jpg") {
+    const validExts = ["png", "jpg"];
+
+    if (!validExts.includes(ext)) {
       req.uploadImage = {};
       req.uploadImage.error = true;
       req.uploadImage.result = "Error: archivo no soportado";

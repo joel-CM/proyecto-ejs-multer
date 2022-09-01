@@ -6,6 +6,8 @@ const sendBtn = document.querySelector(".form__send");
 sendBtn.addEventListener("click", async (e) => {
   e.preventDefault();
 
+  // if (!formFile.files[0]) return alert("File no selected!");
+
   const serie = new FormData();
   serie.append("name", formName.value);
   serie.append("description", formDescription.value);
