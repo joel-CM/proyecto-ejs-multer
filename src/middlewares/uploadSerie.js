@@ -24,7 +24,7 @@ const uploadSerie = multer({
       return cb(null, false);
     }
 
-    if (!req.body.name.trim() || !req.body.description) {
+    if (!req.body.name.trim() || !req.body.description.trim()) {
       req.uploadImage = {};
       req.uploadImage.error = true;
       req.uploadImage.result = "name and description are required!";
