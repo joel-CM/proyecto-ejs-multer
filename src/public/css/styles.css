@@ -72,18 +72,17 @@ button {
 
 /* detail series */
 .detail {
+  width: 300px;
+  margin: 0 auto;
   display: grid;
   grid-template-areas:
-    "title title title"
-    "image image description"
-    "image image description";
+    "title"
+    "image"
+    "description";
 }
 .detail__title {
+  text-align: center;
   grid-area: title;
-  margin-left: 7rem;
-}
-.detail__description {
-  grid-area: description;
 }
 .detail__img {
   min-width: 300px;
@@ -91,8 +90,17 @@ button {
 }
 .detail__img img {
   display: block;
-  margin-left: auto;
-  margin-right: 1rem;
+  margin: 0 auto;
+}
+.detail__description {
+  grid-area: description;
+  padding: 10px;
+  margin-top: 5px;
+  height: 200px;
+  overflow-y: auto;
+}
+.detail__description p {
+  text-align: justify;
 }
 
 /* button styles ()send */
@@ -116,6 +124,12 @@ button {
 }
 .padding-y {
   padding: 2rem 0;
+}
+.margin-x {
+  margin: 0 2rem;
+}
+.margin-y {
+  margin: 2rem 0;
 }
 .padding-bottom {
   padding-bottom: 2rem;
