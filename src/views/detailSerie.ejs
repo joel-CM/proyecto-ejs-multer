@@ -4,19 +4,7 @@
         <%- include('./layaouts/header', { title: "View Series" }) %>
 
             <main id="main">
-                <div class="detail">
-                    <h3 class="detail__title padding-y">
-                        <%= serie.name %>
-                    </h3>
-                    <div class="detail__description">
-                        <p>
-                            <%= serie.description %>
-                        </p>
-                    </div>
-                    <div class="detail__img">
-                        <img src="http://localhost:3001/resizes/<%= serie.image %>" alt="<%= serie.images %>">
-                    </div>
-                </div>
+                <%- include("./layaouts/cardDetail", { serie }) %>
             </main>
     </div>
 
