@@ -23,11 +23,12 @@ sendBtn.addEventListener("click", async (e) => {
     const res = await responseSendSerie.json();
 
     if (res.error) {
-      return alert(res.result);
+      alert(res.result);
     } else {
-      return alert(
+      alert(
         `New Serie:\nname: ${res.result.name}\ndescription: ${res.result.description}\nimgName: ${res.result.image}`
       );
+      window.location.href = "/view-series";
     }
   } catch (e) {
     console.log(e);
